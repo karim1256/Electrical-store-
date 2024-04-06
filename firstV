@@ -1,0 +1,135 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import 'package:flutter/widgets.dart';
+import 'package:myapp/material/colors.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: MyShop(),
+      debugShowCheckedModeBanner: false,
+    );
+  }
+}
+
+class MyShop extends StatefulWidget {
+  const MyShop({super.key});
+
+  @override
+  State<MyShop> createState() => MyShopState();
+}
+
+class MyShopState extends State<MyShop> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: kPrimaryColor,
+      appBar:AppBar(
+
+
+        backgroundColor: kPrimaryColor,
+        elevation: 0,
+        leading: IconButton(
+          onPressed: () {},
+          icon: Icon(Icons.menu),
+          iconSize: 30,
+          color: kBackgroundColor,
+        ),
+        title: Text(
+          "KemoShop",
+          style: TextStyle(
+            color: kBackgroundColor,
+            fontSize: 22,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        
+      ),
+
+
+
+
+      body:
+      
+       Column(
+        children: [
+          
+          Expanded(
+            child: Stack(
+              children: [
+                   
+              
+            
+                // Design container
+                Container(
+                  height:double.infinity,
+                  width: double.infinity,
+                  margin: EdgeInsets.only(top: 40), 
+                  decoration: BoxDecoration(
+                    color: kBackgroundColor,
+                   borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(45),
+                      topRight: Radius.circular(45),
+                    ),
+                  ),
+                ),
+          
+
+
+
+
+         Positioned(
+          left:31,
+           child: Container(
+            height: 150,
+            width: 330,
+            padding: EdgeInsets.symmetric(
+              vertical: 20,
+              horizontal: 20
+              ),
+            decoration: BoxDecoration(
+           
+           
+              color:kBackgroundColor,
+              borderRadius: BorderRadius.circular(20),
+                boxShadow :[
+                      BoxShadow(
+                offset:Offset(0,18),
+                blurRadius: 25,
+                color: Colors.black26,
+              
+                ),
+                     ]
+            )
+           ),
+         )
+
+
+
+
+
+
+
+
+
+
+
+
+    ],
+            ),
+          ),
+
+        ],
+      ),
+    );    
+           
+  }
+}
