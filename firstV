@@ -30,11 +30,11 @@ class MyShop extends StatefulWidget {
 class MyShopState extends State<MyShop> {
   @override
   Widget build(BuildContext context) {
+    double k = 130;
+
     return Scaffold(
       backgroundColor: kPrimaryColor,
-      appBar:AppBar(
-
-
+      appBar: AppBar(
         backgroundColor: kPrimaryColor,
         elevation: 0,
         leading: IconButton(
@@ -51,85 +51,84 @@ class MyShopState extends State<MyShop> {
             fontWeight: FontWeight.bold,
           ),
         ),
-        
       ),
+
+
+
+
+
+
 
 
 
 
       body:
       
-       Column(
+
+
+
+
+
+          Column(
         children: [
-          
           Expanded(
             child: Stack(
               children: [
-                   
-              
-            
-                // Design container
+               
+
                 Container(
-                  height:double.infinity,
+                  height: double.infinity,
                   width: double.infinity,
-                  margin: EdgeInsets.only(top: 40), 
+                   margin: EdgeInsets.only(top: 70),
                   decoration: BoxDecoration(
-                    color: kBackgroundColor,
-                   borderRadius: BorderRadius.only(
+                    color:kBackgroundColor,
+                    borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(45),
                       topRight: Radius.circular(45),
                     ),
                   ),
                 ),
-          
 
 
 
 
-         Positioned(
-          left:31,
-           child: Container(
-            height: 150,
-            width: 330,
-            padding: EdgeInsets.symmetric(
-              vertical: 20,
-              horizontal: 20
-              ),
-            decoration: BoxDecoration(
-           
-           
-              color:kBackgroundColor,
-              borderRadius: BorderRadius.circular(20),
-                boxShadow :[
-                      BoxShadow(
-                offset:Offset(0,18),
-                blurRadius: 25,
-                color: Colors.black26,
-              
+
+                Positioned(
+                  left: 31,
+                  top: 23,
+                  child: Container(
+                      height: 150,
+                      width: 340,
+                      padding:
+                          EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+                      decoration: BoxDecoration(
+                          color: kBackgroundColor,
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: [
+                            BoxShadow(
+                              offset: Offset(0, 18),
+                              blurRadius: 25,
+                              color: Colors.black26,
+                            ),
+                          ])),
                 ),
-                     ]
-            )
-           ),
-         )
 
 
-
-
-
-
-
-
-
-
-
-
-    ],
+                Positioned(
+                  top: 4,
+                  child: Container(
+                    width: k,
+                    height: k,
+                    child: Image.asset(
+                      'lib/material/airpod.png',
+                    ),
+                  ),
+                )
+              ],
             ),
           ),
-
         ],
       ),
-    );    
-           
+    );
   }
 }
