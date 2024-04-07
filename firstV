@@ -47,10 +47,23 @@ class MyShopState extends State<MyShop> {
           "KemoShop",
           style: TextStyle(
             color: kBackgroundColor,
-            fontSize: 22,
+            fontSize: 28,
             fontWeight: FontWeight.bold,
+        
+
           ),
         ),
+        // Text(
+        //   "KemoShop",
+        //   style: TextStyle(
+        //     color: kBackgroundColor,
+        //     fontSize: 27,
+        //     fontWeight: FontWeight.bold,
+        //   ),
+        // ),
+        
+
+
       ),
 
 
@@ -116,8 +129,9 @@ class MyShopState extends State<MyShop> {
 
                 Positioned(
                   top: 4,
-                  left: 20,
+                  left: 30,
                   child: Container(
+
                     width: k,
                     height: k,
                     child: Image.asset(
