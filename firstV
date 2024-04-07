@@ -94,8 +94,8 @@ class MyShopState extends State<MyShop> {
 
 
                 Positioned(
-                  left: 31,
-                  top: 23,
+                  left: 28,
+                  top: 26,
                   child: Container(
                       height: 150,
                       width: 340,
@@ -116,6 +116,7 @@ class MyShopState extends State<MyShop> {
 
                 Positioned(
                   top: 4,
+                  left: 20,
                   child: Container(
                     width: k,
                     height: k,
